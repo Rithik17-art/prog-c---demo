@@ -28,7 +28,11 @@ int main()
         {
             cout << "marks not sufficient for admission";
         }
-    }    
+    }
+    else 
+    {
+        cout << "invalid cource name";
+    } 
     return 0;
 
 }
