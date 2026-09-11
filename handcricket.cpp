@@ -16,6 +16,11 @@ int toss()
 void userbatting(int& userinput, int& computeroutput)
 {
     cout << "enter a number between 0 and 6;" << endl;
+    if (userinput < 0 || userinput > 6)
+    {
+        cout << "invalid input" << endl;
+        cout << "enter a number between 0 and 6;" << endl;
+    }
     cin >> userinput;
     computeroutput=rand()%6+1;
 }
@@ -23,6 +28,12 @@ void userbowling(int&userinput, int& computeroutput)
 {
     cout << "enter a number between 0 to 6 to bowl" << endl;
     cin >> userinput;
+    if (userinput < 0 || userinput > 6)
+    {
+        cout << "invalid input" << endl;
+        cout << "enter a number between 0 to 6 to bowl" << endl;
+    }
+    ;
     computeroutput=rand()%6+1;
     cout << "computer chose: " << computeroutput << endl;
 }
@@ -30,6 +41,11 @@ void computerbatting(int& userinput , int& computeroutput)
 {
      cout << "enter a number between 0 to 6 to bowl" << endl;
     cin >> userinput;
+    if (userinput < 0 || userinput > 6)
+    {
+        cout << "invalid input" << endl;
+        cout << "enter a number between 0 to 6 to bowl" << endl;
+    }
     computeroutput=rand()%6+1;
     cout << "computer chose: " << computeroutput << endl;
 }
@@ -37,6 +53,11 @@ void computerbowling(int& userinput, int& computeroutput)
 {
     cout << "enter a number between 0 and 6;" << endl;
     cin >> userinput;
+    if (userinput < 0 || userinput > 6)
+    {
+        cout << "invalid input" << endl;
+        cout << "enter a number between 0 and 6;" << endl;
+    }
     computeroutput=rand()%6+1;
     cout << "computer chose: " << computeroutput << endl;
 }
@@ -257,5 +278,21 @@ int main()
         }
     }
 
+    cout << "do you want to play again? (1 for yes and 2 for no)" << endl;
+    cin >> choice;
+    if (choice == 1)
+    {
+        cout << "starting again " << endl;
+        return main();
+    }
+    else if (choice == 2)
+    {
+        cout << "game over" << endl;
+    }
+    else
+    {
+        cout << "invalid input" << endl;
+    }
 
-}   
+    return 0;
+}
